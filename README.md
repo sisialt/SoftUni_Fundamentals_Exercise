@@ -1,2 +1,2 @@
-# SoftUni-Fundamentals-Exercise
+# SoftUni_Fundamentals_Exercise
  Exercises from Programming Fundamentals with Python
