@@ -7,9 +7,8 @@ filtered_list = []
 for _ in range(n):
     string = input()
     list_of_strings.append(string)
-print(list_of_strings)
+    if word in string:
+        filtered_list.append(string)
 
-for el in list_of_strings:
-    if word in el:
-        filtered_list.append(el)
+print(list_of_strings)
 print(filtered_list)

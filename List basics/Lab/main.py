@@ -1,18 +1,8 @@
-string = input()
-new_string = string.strip()
-list_from_string = string.split()
-result = ""
+string = input().split()
 
-while True:
-    new_string = new_string.strip()
-    new_string = new_string.strip("a")
-    for el in list_from_string:
-        if "a" in el:
-            result += el.strip("a")
-        else:
-            result += el
-    if "a" not in list_from_string:
-        break
+result = []
+
+result.insert(0, string[1])
 print(result)
 
 
