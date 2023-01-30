@@ -1,9 +1,4 @@
-string = input().split()
+string = input()
 
-result = []
-
-result.insert(0, string[1])
-print(result)
-
-
-#ahsa ajaj     hgj hakc nn
+list_from_string = list(string)
+print(list_from_string)
