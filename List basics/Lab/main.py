@@ -1,4 +1,5 @@
-string = input()
+words = input().lower()
 
-list_from_string = list(string)
-print(list_from_string)
+total_count = words.count('sand') + words.count('water') + words.count('fish') + words.count('sun')
+
+print(total_count)
