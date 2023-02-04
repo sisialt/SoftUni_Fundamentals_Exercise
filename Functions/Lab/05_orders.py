@@ -15,4 +15,3 @@ product = input()
 quantity = int(input())
 
 print(f"{calculate_price(product, quantity):.2f}")
-
