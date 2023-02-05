@@ -1,22 +1,19 @@
 #
 #
-numbers = input()
+ages = [5, 12, 17, 18, 24, 32]
 
 
-def all_sum(num):
-    even_total = 0
-
-    odd_total = 0
-    for i in num:
-        i = int(i)
-        if i % 2 == 0:
-            even_total += i
-        else:
-            odd_total += i
-    return f"Odd sum = {odd_total}, Even sum = {even_total}"
+def my_func(a):
+    if a < 18:
+        return False
+    else:
+        return True
 
 
-print(all_sum(numbers))
+adults = filter(my_func, ages)
+
+for x in adults:
+    print(x)
 
 
 
