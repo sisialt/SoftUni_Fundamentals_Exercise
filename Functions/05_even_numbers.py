@@ -7,11 +7,16 @@ def even_or_odd(num):
 
 numbers = [int(x) for x in input().split()]
 
-even_nums = []
+even_numbers = list(filter(even_or_odd, numbers))
 
-even_numbers = filter(even_or_odd, numbers)
+print(even_numbers)
 
-for number in even_numbers:
-    even_nums.append(number)
 
-print(even_nums)
+# even_nums = []
+#
+# even_numbers = filter(even_or_odd, numbers)
+#
+# for number in even_numbers:
+#     even_nums.append(number)
+#
+# print(even_nums)
