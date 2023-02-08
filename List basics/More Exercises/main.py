@@ -1,19 +1,9 @@
 #
 #
-ages = [5, 12, 17, 18, 24, 32]
+def sum_nums():
+    print(5 + 5)
 
-
-def my_func(a):
-    if a < 18:
-        return False
-    else:
-        return True
-
-
-adults = filter(my_func, ages)
-
-for x in adults:
-    print(x)
+print(sum_nums())
 
 
 
