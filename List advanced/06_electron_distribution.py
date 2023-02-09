@@ -1,8 +1,3 @@
-# def fill_shell(left_electrons, n):
-#     max_electrons = 2 * (n ** 2)
-#     left_electrons -= max_electrons
-
-
 electrons = int(input())
 
 shells = []
