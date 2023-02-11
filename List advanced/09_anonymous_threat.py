@@ -17,6 +17,7 @@ while command != "3:1":
         first_arg = max(0, first_arg)
         second_arg = min(len(input_data) - 1, second_arg)
         difference = second_arg - first_arg
+
         if first_arg >= second_arg:
             first_arg = second_arg - difference
 
@@ -31,7 +32,6 @@ while command != "3:1":
     elif action == "divide":
 
         chars_in_divided_part = len(input_data[first_arg]) // second_arg
-
         word_to_divide = input_data[first_arg]
 
         for n in range(0, second_arg * 2, 2):
@@ -41,6 +41,7 @@ while command != "3:1":
             result_from_divide.append(divided_part)
 
         input_data.pop(first_arg)
+        
         for i in range(second_arg):
             input_data.insert(first_arg + i, result_from_divide[i])
 
