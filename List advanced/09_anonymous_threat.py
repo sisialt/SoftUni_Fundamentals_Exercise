@@ -41,7 +41,7 @@ while command != "3:1":
             result_from_divide.append(divided_part)
 
         input_data.pop(first_arg)
-        
+
         for i in range(second_arg):
             input_data.insert(first_arg + i, result_from_divide[i])
 
