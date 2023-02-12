@@ -1,7 +1,5 @@
 input_data = input(). split()
-
 command = input()
-
 new_list = []
 
 while command != "3:1":
