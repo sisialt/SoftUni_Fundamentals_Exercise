@@ -1,55 +1,60 @@
-#
-#
-def sum_nums():
-    print(5 + 5)
+pirate_ship = [int(x) for x in input().split(">")]
+warship = [int(x) for x in input().split(">")]
+max_health_capacity = int(input())
 
-print(sum_nums())
+repair_count = 0
+is_winner = False
 
+while True:
+    command = input()
+    if command == "Retire":
+        break
 
+    command_as_list = command.split()
+    action = command_as_list[0]
 
+    if action == "Fire":
+        index = int(command_as_list[1])
+        damage = int(command_as_list[2])
 
+        if 0 <= index < len(warship):
+            warship[index] -= damage
+            if warship[index] <= 0:
+                print("You won! The enemy ship has sunken.")
+                is_winner = True
+                break
 
+    elif action == "Defend":
+        start_idx = int(command_as_list[1])
+        end_idx = int(command_as_list[2])
+        damage = int(command_as_list[3])
 
-# # 1 8 8 7 6 4 2 1
-# #
-# # 1 2 4 6 7 8 8 1
-# #
-# # 2 6 9 4 9 5 8 9
-# #
-# # 9 8 5 9 4 9 6 2
-#
-# numbers = [int(x) for x in input().split()]
-#
-# # print(sorted(numbers))
-# print(numbers)
-# print(f"index not reversed {numbers.index(max(numbers))}")
-# numbers.reverse()
-# print(f"reversed{numbers}")
-# print(f"index max reversed{numbers.index(max(numbers))}")
-# print(f"index max right in original with more max {len(numbers) - numbers.index(max(numbers)) - 1}")
-#
-# # #sled len i = k * i - len
-# #
-# # numbers_without_executed = numbers.copy()
-# # executed_list = []
-# # counter = 0
-# #
-# # for i in range(1, len(numbers) + 1):
-# #     number_for_execution = k * i
-# #     if number_for_execution > len(numbers):
-# #         number_for_execution -= len(numbers)
-# #         if counter < 3:
-# #             executed_list.append(numbers[number_for_execution - 1])
-# #             numbers_without_executed.pop(number_for_execution - 1)
-# #         else:
-# #             executed_list.append(numbers_without_executed[number_for_execution - 1])
-# #             numbers_without_executed.pop(number_for_execution - 1)
-# #     else:
-# #         executed_list.append(numbers[number_for_execution - 1])
-# #         numbers_without_executed.pop(number_for_execution - i)
-# #
-# # print(numbers)
-# # print(number_for_execution)
-# # print(numbers_without_executed)
-# # print(executed_list)
-# #
+        if 0 <= start_idx < end_idx < len(pirate_ship):
+
+            for i in range(start_idx, end_idx + 1):
+                pirate_ship[i] -= damage
+
+                if pirate_ship[i] <= 0:
+                    print("You lost! The pirate ship has sunken.")
+                    is_winner = True
+                    break
+
+    elif action == "Repair":
+        index = int(command_as_list[1])
+        health = int(command_as_list[2])
+
+        if 0 <= index < len(pirate_ship):
+            pirate_ship[index] += health
+            if pirate_ship[index] > max_health_capacity:
+                pirate_ship[index] = max_health_capacity
+
+    elif action == "Status":
+
+        for section in pirate_ship:
+            if section < max_health_capacity * 0.2:
+                repair_count += 1
+
+        print(f"{repair_count} sections need repair.")
+
+if not is_winner:
+    print(f"Pirate ship status: {sum(pirate_ship)}\nWarship status: {sum(warship)}")

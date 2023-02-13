@@ -59,7 +59,7 @@ while True:
             lessons.append(exercise)
         else:
             index_lesson_for_exercise = lessons.index(lesson_tittle)
-            if is_lesson_in_course(lesson_tittle, lessons) and not is_exercise_in_course(exercise, lessons):
+            if not is_exercise_in_course(exercise, lessons):
                 lessons.insert(index_lesson_for_exercise + 1, exercise)
 
 for lesson in lessons:
