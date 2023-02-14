@@ -20,6 +20,7 @@ while True:
     elif action == "Correct":
         new_item = command_as_list[2]
         if item in shopping_list:
+            # shopping_list[shopping_list.index(item)] = new_item
             shopping_list.insert(shopping_list.index(item), new_item)
             shopping_list.remove(item)
 
