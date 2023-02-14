@@ -4,8 +4,9 @@ max_health_capacity = int(input())
 
 repair_count = 0
 is_winner = False
+is_running = True
 
-while True:
+while is_running:
     command = input()
     if command == "Retire":
         break
@@ -29,7 +30,7 @@ while True:
         end_idx = int(command_as_list[2])
         damage = int(command_as_list[3])
 
-        if 0 <= start_idx < end_idx < len(pirate_ship):
+        if 0 <= start_idx < len(pirate_ship) and 0 <= end_idx < len(pirate_ship):
 
             for i in range(start_idx, end_idx + 1):
                 pirate_ship[i] -= damage
@@ -37,6 +38,7 @@ while True:
                 if pirate_ship[i] <= 0:
                     print("You lost! The pirate ship has sunken.")
                     is_winner = True
+                    is_running = False
                     break
 
     elif action == "Repair":
@@ -58,3 +60,8 @@ while True:
 
 if not is_winner:
     print(f"Pirate ship status: {sum(pirate_ship)}\nWarship status: {sum(warship)}")
+# 12>13>11>20>66
+# 12>22>33>44>55>32>18
+# 70
+# Fire 2 40
+# Retire
