@@ -32,8 +32,8 @@ if len(treasure):
 else:
     print("Failed treasure hunt.")
 
-# line 24, 25 does not function always with this: for i in range(count, 0, -1):
-#                                                     stolen_items.append(treasure.pop(-i))
+# line 24, 25 does not function always with this for-loop: for i in range(count, 0, -1):
+#                                                               stolen_items.append(treasure.pop(-i))
 # forgot line 23
 
 
