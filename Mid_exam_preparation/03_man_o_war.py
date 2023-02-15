@@ -2,7 +2,6 @@ pirate_ship = [int(x) for x in input().split(">")]
 warship = [int(x) for x in input().split(">")]
 max_health_capacity = int(input())
 
-repair_count = 0
 is_winner = False
 is_running = True
 
@@ -10,6 +9,10 @@ while is_running:
     command = input()
     if command == "Retire":
         break
+    # elif command == "Status":
+    #     count = sum(1 for x in pirate_ship if (x < 0.2 * max_health_capacity))
+    #     print(f"{count} sections need repair.")
+    #     continue
 
     command_as_list = command.split()
     action = command_as_list[0]
@@ -51,15 +54,19 @@ while is_running:
                 pirate_ship[index] = max_health_capacity
 
     elif action == "Status":
-
+        # count = sum(1 for x in pirate_ship if (x < 0.2 * max_health_capacity))
+        count = 0
         for section in pirate_ship:
             if section < max_health_capacity * 0.2:
-                repair_count += 1
+                count += 1
 
-        print(f"{repair_count} sections need repair.")
+        print(f"{count} sections need repair.")
 
 if not is_winner:
     print(f"Pirate ship status: {sum(pirate_ship)}\nWarship status: {sum(warship)}")
+
+# line 58: count = 0 should be here, not before the while-loop
+#
 # 12>13>11>20>66
 # 12>22>33>44>55>32>18
 # 70
