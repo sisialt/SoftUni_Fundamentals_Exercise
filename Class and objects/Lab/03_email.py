@@ -27,3 +27,5 @@ for i, email in enumerate(emails):
     if i in indexes:
         emails[i].send()
     print(email.get_info())
+
+    # print(f"{email.sender} says to {email.receiver}: {email.content}. Sent: {email.is_sent}")
