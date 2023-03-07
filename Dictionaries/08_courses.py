@@ -14,5 +14,5 @@ while input_data != "end":
 
 for key in courses:
     print(f"{key}: {len(courses[key])}")
-    for i in range(len(courses[key])):
-        print(f"-- {courses[key][i]}")
+    for stud in courses[key]:
+        print(f"-- {stud}")

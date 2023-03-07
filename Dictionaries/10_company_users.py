@@ -15,5 +15,5 @@ while input_data != "End":
 
 for company_name in company_users:
     print(company_name)
-    for employee_id in range(len(company_users[company_name])):
-        print(f"-- {company_users[company_name][employee_id]}")
+    for employee_id in company_users[company_name]:
+        print(f"-- {employee_id}")

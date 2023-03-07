@@ -7,9 +7,9 @@ for _ in range(n):
     student_grade = float(input())
 
     if student_name not in academy:
-        academy[student_name] = [student_grade]
-    else:
-        academy[student_name].append(student_grade)
+        academy[student_name] = []
+
+    academy[student_name].append(student_grade)
 
 for student in academy:
     average_grade = sum(academy[student]) / len(academy[student])
