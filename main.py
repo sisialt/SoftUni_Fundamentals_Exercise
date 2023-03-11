@@ -1,39 +1,28 @@
-neighborhood = input().split("@")
+string_input = input()
+new_string = ""
+result = ""
 
-integers_hood = [int(num) for num in neighborhood]
-comand = input()
-
-counter = 0
-successful = 0
-not_successful = 0
-
-while comand != "Love!":
-
-    acction, indx = comand.split()
-    indx = int(indx)
-    counter += indx
-
-    if counter >= len(integers_hood):
-        counter = 0
-
-    if integers_hood[counter] == 0:
-        print(f"Place {counter} already had Valentine's day.")
+while len(string_input):
+    for i in range(len(string_input)):
+        if string_input[i] == ">":
+            result = string_input[:i + 1]
+            break
     else:
-        integers_hood[counter] -= 2
-        if integers_hood[counter] == 0:
-            print(f"Place {counter} has Valentine's day.")
+        result = string_input
 
-    comand = input()
+    string_input = string_input.replace(result, "")
+    new_string += result
 
-print(f"Cupid's last position was {counter}.")
+    if string_input:
+        if string_input[0].isdigit():
+            explosion = int(string_input[0])
+            for n in range(explosion):
+                string_input = string_input.replace(string_input[0], "", 1)
+        else:
+            new_string += string_input
+            string_input = ""
 
-for integer_hood in integers_hood:
-    if integer_hood == 0:
-        successful += 1
-    else:
-        not_successful += 1
+print(new_string)
+print(string_input)
 
-if not not_successful:
-    print("Mission was successful.")
-else:
-    print(f"Cupid has failed {not_successful} places.")
+
