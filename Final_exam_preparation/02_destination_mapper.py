@@ -17,4 +17,5 @@ for match in matches:
 print(f"Destinations: {', '.join(destinations)}")
 print(f"Travel Points: {total_points}")
 
-# (?<=(=|/))[A-Z][a-z][a-z]+(?=\1) => line 13 match.group()
+# (?<=(=|/))[A-Z][A-Za-z][A-Za-z]+(?=\1) => line 13 match.group()
+# forgot other upper letters
