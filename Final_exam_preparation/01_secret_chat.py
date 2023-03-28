@@ -37,5 +37,3 @@ print(f"You have a new text message: {message}")
 # Reverse:|:!gnil
 # InsertSpace:|:5
 # Reveal
-
-
