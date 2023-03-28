@@ -33,4 +33,3 @@ print(f"You have food to last you for: {total_calories//2000} days!")
 
 for food in foods:
     print(food)
-
