@@ -26,7 +26,7 @@ match_results = re.finditer(pattern, food_info)
 for match in match_results:
     foods_dict = match.groupdict()
     total_calories += int(match['Calories'])
-    res = f"Item: {foods_dict['Item']}, Best before: {foods_dict['ExpirationDate']}, Nutrition: {foods_dict['Calories']}"
+    res = f"Item: {match['Item']}, Best before: {match[2]}, Nutrition: {foods_dict['Calories']}"
     foods.append(res)
 
 print(f"You have food to last you for: {total_calories//2000} days!")
