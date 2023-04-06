@@ -17,8 +17,10 @@ data_input = input()
 
 while data_input != "Stop":
     data_input = data_input.split()
+
     email = Email(data_input[0], data_input[1], data_input[2])
     emails.append(email)
+
     data_input = input()
 
 indexes = [int(x) for x in input().split(", ")]
