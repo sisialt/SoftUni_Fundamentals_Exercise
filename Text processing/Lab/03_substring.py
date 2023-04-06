@@ -5,3 +5,4 @@ while substring in string:
     string = string.replace(substring, "")
 
 print(string)
+
