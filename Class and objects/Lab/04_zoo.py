@@ -35,4 +35,5 @@ for i in range(n):
     zoo.add_animal(species, name)
 
 info = input()
+
 print(zoo.get_info(info))
