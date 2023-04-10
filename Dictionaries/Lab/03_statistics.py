@@ -15,6 +15,8 @@ while elements != "statistics":
     elements = input()
 
 print("Products in stock:")
+
 for product, quantity in products.items():
     print(f"- {product}: {quantity}")
+
 print(f"Total Products: {len(products)}\nTotal Quantity: {sum(products.values())}")
