@@ -12,5 +12,4 @@ def check_grades(gr):
 
 
 grade = float(input())
-
 check_grades(grade)
