@@ -16,5 +16,6 @@ if wealthiest - total_difference_wealth_to_minimum >= minimum_wealth:
     new_population.insert(population.index(wealthiest), wealthiest - total_difference_wealth_to_minimum)
     new_population.remove(wealthiest)
     print(new_population)
+
 else:
     print("No equal distribution possible")
