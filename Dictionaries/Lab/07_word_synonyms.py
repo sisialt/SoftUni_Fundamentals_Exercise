@@ -12,4 +12,3 @@ for _ in range(n):
 
 for word, synonym in words.items():
     print(f"{word} - {', '.join(synonym)}")
-
