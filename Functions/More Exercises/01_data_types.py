@@ -18,4 +18,3 @@ input_type = input()
 text = input()
 
 print(manipulate_input(input_type, text))
-
