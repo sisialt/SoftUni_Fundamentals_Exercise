@@ -27,4 +27,3 @@ elif command == "positive":
     print(positive)
 elif command == "negative":
     print(negative)
-
