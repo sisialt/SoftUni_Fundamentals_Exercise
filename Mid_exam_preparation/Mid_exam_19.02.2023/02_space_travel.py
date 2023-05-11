@@ -44,3 +44,4 @@ for element in route:
 
     elif command == "Titan":
         print(f"You have reached Titan, all passengers are safe.")
+
