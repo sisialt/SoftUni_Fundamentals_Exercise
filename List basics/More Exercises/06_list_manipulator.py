@@ -95,6 +95,7 @@ while True:
 
 print(numbers)
 
+
 # 1 10 100 1000
 # exchange 3
 # first 2 odd
