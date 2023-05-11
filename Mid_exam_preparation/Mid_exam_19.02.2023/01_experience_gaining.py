@@ -23,4 +23,3 @@ for battle in range(1, battles + 1):
 
 else:
     print(f"Player was not able to collect the needed experience, {needed_experience - total_experience:.2f} more needed.")
-
