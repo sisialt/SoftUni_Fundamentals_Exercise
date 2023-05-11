@@ -16,4 +16,3 @@ if time_left_car > time_right_car:
     print(f"The winner is right with total time: {time_right_car:.1f}")
 else:
     print(f"The winner is left with total time: {time_left_car:.1f}")
-
